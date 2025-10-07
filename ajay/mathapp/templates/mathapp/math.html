@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>BMI Calculator</title>
+        <style>
+        body{
+          background-color:gold;
+          border-top: 30;
+        }
+        .m{
+          background-color: slateblue;
+          border-style: linear;
+          margin-top: 400px;
+          margin-left: 400px;
+          margin-right: 400px;
+          
+        }
+            .main{
+                font-size: 300%;
+                text-align: center;
+                background-color: silver;
+                 margin-left: 100px;
+                  margin-right: 100px;
+                  padding: 100px;
+                  
+                  
+            }
+            .a{
+                font-size: 200%;
+                text-align: center;
+                background-color: silver;
+                 margin-left: 100px;
+                  margin-right: 100px;
+                
+                 
+            }
+            form{
+              text-align: center;
+              background-color: silver;
+               margin-left: 100px;
+             margin-right: 100px;
+             padding: 100px;
+            }
+           
+        </style>
+    </head>
+    <body>
+
+       <div class="m">
+        <div class="main">BMI CALCULATOR</div>
+        <div class="a">
+         Ajay karthick M(25010418)</div>
+        <form method="post">
+          {% csrf_token %}
+           
+           
+            <label>Weight(kg)=</label>
+            <input type="text" name="weight" value="{{w}}"><br><br>
+             <label>Height(cm)=</label>
+            <input type="text" name="height" value="{{h}}"><br><br>
+            <button type="submit">Calculate</button><br><br>
+            <label>BMI=</label>
+            <input type="text" name="bmi" value="{{bmi}}">
+        </div>
+        </form>
+        
+        
+    </body>
+</html>
